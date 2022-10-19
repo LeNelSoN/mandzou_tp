@@ -1,0 +1,9 @@
+@import '../../../node_modules/bootstrap/scss/navbar';
+@import '../../../node_modules/bootstrap/scss/nav';
+
+.navbar{
+    position: sticky !important;
+    a:hover{
+        cursor: pointer;
+    }   
+}
