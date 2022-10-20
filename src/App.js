@@ -19,13 +19,14 @@ function App() {
   return (
   <>
     <NavBar>
-      <NavItem title={'Accesoires'} link={'/accessories'}/>
-      <NavItem title={'Mariage'} link={'/weddings'}/>
-      <NavItem title={'Costumes'} link={'/costumes'}/>
-      <NavItem title={'Spectacles'} link={'/shows'}/>
-      <NavItem title={'A propos'} link={'/abouts'}/>
-      <NavItem title={'Boutique'} link={'/shop'}/>
+      <NavItem title={'Accesoires'} to={'/accessories'}/>
+      <NavItem title={'Mariage'} to={'/weddings'}/>
+      <NavItem title={'Costumes'} to={'/costumes'}/>
+      <NavItem title={'Spectacles'} to={'/shows'}/>
+      <NavItem title={'A propos'} to={'/abouts'}/>
+      <NavItem title={'Boutique'} to={'/shop'}/>
     </NavBar>
+
       <Routes>
         <Route path='/' element={<LandingScreen />}/>
         <Route path='/accessories' element={<AccessorieScreen/>}/>
@@ -35,11 +36,13 @@ function App() {
         <Route path='/abouts' element={<AboutScreen/>}/>
         <Route path='/shop' element={<ShopScreen/>}>
           <Route path='/shop/pinces' element={<BarrettesShopScreen/>}/>
+          {/* <Route path='/shop/pinces/:id' element={<BarrettesShopScreen/>}/> */}
           <Route path='/shop/tiares' element={<BijouxShopScreen/>}/>
           <Route path='/shop/parrures' element={<ParruresShopScreen/>}/>
           <Route path='/shop/barrettes' element={<PincesShopScreen/>}/>
           <Route path='/shop/bijoux' element={<TiaresShopScreen/>}/>
         </Route>
+        {/* TODO Prevoir une route 404 */}
       </Routes>
   </>
 
